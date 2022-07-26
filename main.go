@@ -40,6 +40,10 @@ func get_file_name() string {
 	return "problems.csv"
 }
 
+func trim(value string) string {
+	return strings.Trim(value, " ")
+}
+
 func main() {
 	// open file
 	f, err := os.Open(get_file_name())
@@ -73,7 +77,7 @@ func main() {
 		}
 
 		question := data[0]
-		answer := data[1]
+		answer := trim(data[1])
 
 		fmt.Printf("Question (%d): %s\n", question_count, question)
 		fmt.Print("-> ")
@@ -83,6 +87,7 @@ func main() {
 		// convert CRLF to LF
 		text = strings.Replace(text, "\r", "", -1)
 		text = strings.Replace(text, "\n", "", -1)
+		text = trim(text)
 
 		question_count += 1
 

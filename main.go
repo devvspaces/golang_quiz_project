@@ -58,7 +58,7 @@ func startQuiz(problems []QA, ch chan bool) {
 
 func getOptions() (string, bool, int) {
 	csvFileName := flag.String("c", "problems.csv", "Filename for the csv containing questions")
-	shuffle := flag.Bool("s", false, "Set to 1 to shuffle the questions")
+	shuffle := flag.Bool("s", false, "Use flag to shuffle the questions")
 	duration := flag.Int("d", 30, "Duration for quiz value in seconds")
 	flag.Parse()
 	return *csvFileName, *shuffle, *duration

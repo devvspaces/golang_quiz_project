@@ -5,6 +5,7 @@ Simple Golang quiz design, that loads questions from csv file to ask user. User 
 ## Features
 - Users can provide path to their own quiz file as a flag when running the package
 - Users can see their scores and failed at the end of the quiz
+- New Feature: Quiz uses a timer, and users can set timer to start quiz
 
 
 ### Usage
